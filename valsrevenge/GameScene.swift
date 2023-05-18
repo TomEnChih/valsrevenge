@@ -14,23 +14,47 @@ class GameScene: SKScene {
     var graphs = [String : GKGraph]()
     
     private var lastUpdateTime : TimeInterval = 0
+    private var player: Player?
     
     override func sceneDidLoad() {
-
         self.lastUpdateTime = 0
     }
     
+    override func didMove(to view: SKView) {
+        player = childNode(withName: "//player") as? Player
+        player?.move(.stop)
+    }
     
     func touchDown(atPoint pos : CGPoint) {
-        
+        let nodeAtPoint = atPoint(pos)
+        if let touchedNode = nodeAtPoint as? SKSpriteNode {
+            if touchedNode.name?.starts(with: "controller_") == true {
+                let direction = touchedNode.name?.replacingOccurrences(of: "controller_", with: "")
+                player?.move(.init(rawValue: direction ?? "stop")!)
+            } else if touchedNode.name == "button_attack" {
+                player?.attack()
+            }
+        }
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        
+        let nodeAtPoint = atPoint(pos)
+        if let touchedNode = nodeAtPoint as? SKSpriteNode {
+          if touchedNode.name?.starts(with: "controller_") == true {
+            let direction = touchedNode.name?.replacingOccurrences(
+              of: "controller_", with: "")
+            player?.move(Direction(rawValue: direction ?? "stop")!)
+          }
+        }
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        
+        let nodeAtPoint = atPoint(pos)
+        if let touchedNode = nodeAtPoint as? SKSpriteNode {
+          if touchedNode.name?.starts(with: "controller_") == true {
+            player?.stop()
+          }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

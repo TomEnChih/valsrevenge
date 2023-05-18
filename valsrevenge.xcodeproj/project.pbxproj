@@ -14,6 +14,7 @@
 		CEF37A582A16131B009B63D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF37A562A16131B009B63D4 /* Main.storyboard */; };
 		CEF37A5A2A16131B009B63D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF37A592A16131B009B63D4 /* Assets.xcassets */; };
 		CEF37A5D2A16131B009B63D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF37A5B2A16131B009B63D4 /* LaunchScreen.storyboard */; };
+		CEF37A642A161F33009B63D4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF37A632A161F33009B63D4 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CEF37A572A16131B009B63D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEF37A592A16131B009B63D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF37A5C2A16131B009B63D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEF37A632A161F33009B63D4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				CEF37A4C2A16131B009B63D4 /* AppDelegate.swift */,
 				CEF37A4E2A16131B009B63D4 /* GameScene.sks */,
+				CEF37A632A161F33009B63D4 /* Player.swift */,
 				CEF37A522A16131B009B63D4 /* GameScene.swift */,
 				CEF37A542A16131B009B63D4 /* GameViewController.swift */,
 				CEF37A562A16131B009B63D4 /* Main.storyboard */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF37A642A161F33009B63D4 /* Player.swift in Sources */,
 				CEF37A532A16131B009B63D4 /* GameScene.swift in Sources */,
 				CEF37A552A16131B009B63D4 /* GameViewController.swift in Sources */,
 				CEF37A4D2A16131B009B63D4 /* AppDelegate.swift in Sources */,
