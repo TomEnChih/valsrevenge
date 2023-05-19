@@ -16,6 +16,8 @@ class GameScene: SKScene {
     private var lastUpdateTime : TimeInterval = 0
     private var player: Player?
     
+    let margin: CGFloat = 20.0
+    
     override func sceneDidLoad() {
         self.lastUpdateTime = 0
     }
@@ -23,6 +25,16 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         player = childNode(withName: "//player") as? Player
         player?.move(.stop)
+        setupCamera()
+    }
+    
+    func setupCamera() {
+        guard let player = player else { return }
+        //設定為 0 表示攝影機將完全跟隨玩家
+        let distance = SKRange(constantValue: 0)
+        //創建了一個距離約束（Distance Constraint），它將攝影機限制在指定的距離內跟隨玩家
+        let playerConstraint = SKConstraint.distance(distance, to: player)
+        camera?.constraints = [playerConstraint]
     }
     
     func touchDown(atPoint pos : CGPoint) {
@@ -91,5 +103,19 @@ class GameScene: SKScene {
         }
         
         self.lastUpdateTime = currentTime
+    }
+    
+    override func didFinishUpdate() {
+        updateControllerLocation()
+    }
+    
+    func updateControllerLocation() {
+        let controller = childNode(withName: "//controller")
+        controller?.position = .init(x: (viewLeft + margin + insets.left),
+                                     y: (viewBottom + margin + insets.bottom))
+        
+        let attackButton = childNode(withName: "//attackButton")
+        attackButton?.position = CGPoint(x: (viewRight - margin - insets.right),
+                                         y: (viewBottom + margin + insets.bottom))
     }
 }

@@ -40,6 +40,14 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        guard
+            let skView = self.view as? SKView,
+            let gameViewContollerDelegate = skView.scene as? GameViewControllerDelegate else { return }
+        gameViewContollerDelegate.didChangeLayout()
+    }
 
     override var shouldAutorotate: Bool {
         return true
