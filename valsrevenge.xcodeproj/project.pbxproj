@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE79CB7E2A20891900B80701 /* MainTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = CE79CB7D2A20891900B80701 /* MainTileSet.sks */; };
+		CE84C61D2A28715C00D54A5A /* SKTileMapNode+Physics.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84C61C2A28715C00D54A5A /* SKTileMapNode+Physics.swift */; };
 		CEF37A4D2A16131B009B63D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF37A4C2A16131B009B63D4 /* AppDelegate.swift */; };
 		CEF37A4F2A16131B009B63D4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = CEF37A4E2A16131B009B63D4 /* GameScene.sks */; };
 		CEF37A532A16131B009B63D4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF37A522A16131B009B63D4 /* GameScene.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE79CB7D2A20891900B80701 /* MainTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainTileSet.sks; sourceTree = "<group>"; };
+		CE84C61C2A28715C00D54A5A /* SKTileMapNode+Physics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKTileMapNode+Physics.swift"; sourceTree = "<group>"; };
 		CEF37A492A16131B009B63D4 /* valsrevenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = valsrevenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF37A4C2A16131B009B63D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF37A4E2A16131B009B63D4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -71,11 +75,13 @@
 				CEF37A4E2A16131B009B63D4 /* GameScene.sks */,
 				CEF37A652A174B58009B63D4 /* controller.sks */,
 				CEF37A672A174D13009B63D4 /* attackButton.sks */,
+				CE79CB7D2A20891900B80701 /* MainTileSet.sks */,
 				CEF37A632A161F33009B63D4 /* Player.swift */,
 				CEF37A522A16131B009B63D4 /* GameScene.swift */,
 				CEF37A542A16131B009B63D4 /* GameViewController.swift */,
 				CEF37A692A174F74009B63D4 /* SKScene+ViewProperties.swift */,
 				CEF37A6B2A1756E4009B63D4 /* GameScene+ViewUpdates.swift */,
+				CE84C61C2A28715C00D54A5A /* SKTileMapNode+Physics.swift */,
 				CEF37A562A16131B009B63D4 /* Main.storyboard */,
 				CEF37A592A16131B009B63D4 /* Assets.xcassets */,
 				CEF37A5B2A16131B009B63D4 /* LaunchScreen.storyboard */,
@@ -143,6 +149,7 @@
 			files = (
 				CEF37A582A16131B009B63D4 /* Main.storyboard in Resources */,
 				CEF37A682A174D13009B63D4 /* attackButton.sks in Resources */,
+				CE79CB7E2A20891900B80701 /* MainTileSet.sks in Resources */,
 				CEF37A4F2A16131B009B63D4 /* GameScene.sks in Resources */,
 				CEF37A662A174B58009B63D4 /* controller.sks in Resources */,
 				CEF37A5A2A16131B009B63D4 /* Assets.xcassets in Resources */,
@@ -157,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE84C61D2A28715C00D54A5A /* SKTileMapNode+Physics.swift in Sources */,
 				CEF37A642A161F33009B63D4 /* Player.swift in Sources */,
 				CEF37A6A2A174F74009B63D4 /* SKScene+ViewProperties.swift in Sources */,
 				CEF37A532A16131B009B63D4 /* GameScene.swift in Sources */,
